@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/0bj6851ci4x6cy0j?svg=true)](https://ci.appveyor.com/project/Sofiia/carddeliverypattern)
