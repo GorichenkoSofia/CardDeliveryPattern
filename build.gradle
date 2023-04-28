@@ -15,12 +15,21 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
-    testImplementation 'com.codeborne:selenide:6.12.2'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'org.webjars.bower:Faker:3.0.1'
+    implementation 'com.github.piacenti:dsl-maker:1.1.50'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testImplementation 'com.codeborne:selenide:5.19.0'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
-}
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-test {
-    useJUnitPlatform()
-    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+
+    test {
+        useJUnitPlatform()
+        systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    }
 }
